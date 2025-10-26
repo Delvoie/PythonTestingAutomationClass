@@ -4,9 +4,11 @@
 # Description: 
 
 # imports 
-from lab3.Lab3_Alyssa_Lucas_app import calculate_circle_area
+from Lab3_Alyssa_Lucas_app import calculate_circle_area
 from math import pi
 import unittest
 
 #todo: add unit testing for all shapes
-
+def test_circle_area(radius):
+    if radius(2) != 4:
+        print("hi")
