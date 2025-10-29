@@ -4,7 +4,7 @@
 # Description: Application to find the minimum value in a list of integers
 
 
-# finds the minimum value in a list of only numbers retunrs the minimum value and error messages for invalid inputs
+# finds the minimum value in a list of only numbers returns the minimum value and error messages for invalid inputs
 def find_minimum(integer_list):
 
     # first Check if list is empty
@@ -24,5 +24,9 @@ def find_minimum(integer_list):
         #compare each value to the minimum value
         if num < minimum:
             minimum = num
+        elif num > 200:
+            raise ValueError(f"Error.")
     # return the minimum value
     return minimum
+
+
