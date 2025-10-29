@@ -4,11 +4,10 @@ Name: "test_Lab3_Alyssa_Lucas.py"
 Programmer: Alyssa and Lucas
 Description: 
 unit tests for Shape Area Calculator (Lab3).
+Uses unittest framework with menu-driven test suite selection (case-insensitive).
+Tests: valid, zero, float, negative, invalid type, large values for ALL shapes.
+Runs ONLY tests for selected shape with setUp/tearDown fixtures.
 """
-import sys
-import os
-# Add the current directory to Python path
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import unittest
 from math import pi
@@ -273,9 +272,10 @@ def run_tests(shape):
 # Menu shape selection
 def main():
     """Main function to run menu-driven test suite."""
-    print("-"*60)
+    print("\n" + "="*60)
     print(" "*15 + "Area of a Shape Tester")
-    print("-"*60)
+    print(" "*18 + "by Alyssa and Lucas")
+    print("="*60)
     choice = ""
 
     while choice != "q":
@@ -302,7 +302,7 @@ def main():
         # If r test rhombus functions
         elif choice == "r":
             run_tests('r')
-        # If test-all functions
+        # If a test all functions
         elif choice == "a":
             print("-"*60)
             for shape in ['c', 't', 'e', 'r']:
