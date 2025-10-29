@@ -18,7 +18,7 @@ class Test_Minimum(unittest.TestCase):  # Fixed: Test_Minumum -> Test_Minimum
 
     def test_case_2(self):
         # Fixed: Removed incorrect assertEqual with len()
-        # Use assertRaises to verify ValueError is raised for empty list
+        # Use assadasasdsertRaises to verify ValueError is raised for empty list
         self.assertRaises(ValueError, find_minimum, [])
 
 
