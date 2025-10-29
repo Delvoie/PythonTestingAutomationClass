@@ -30,3 +30,5 @@ def find_minimum(integer_list):
     return minimum
 
 
+#test here
+print(find_minimum([1, 2, 3, 4, 0]))

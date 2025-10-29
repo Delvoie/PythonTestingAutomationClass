@@ -54,7 +54,30 @@ class TestMinimum(unittest.TestCase):
         with self.assertRaises(ValueError):
             self.assertFalse(find_minimum([202]))
 
+#-----------------------------------
 # Additional Test Cases
+
+    # Test Case 10: A list with only one element.
+    def test_case_10(self):
+        self.assertEqual(find_minimum([42]), 42, "Should be 42")
+
+    # Test Case 13: A list where all elements are the same.
+    def test_case_13(self):
+        self.assertEqual(find_minimum([5, 5, 5, 5]), 5, "Should be 5")
+
+    # Test Case 15: A list with floating-point numbers.
+    def test_case_15(self):
+        with self.assertRaises(ValueError):
+            find_minimum([1.5, 2.5, 3.5])
+
+    # Test Case 16: A list with zero as the minimum value.
+    def test_case_16(self):
+        self.assertEqual(find_minimum([0, 5, 10, 15]), 0, "Should be 0")
+
+    # Test Case 17: A list with boolean values.
+    def test_case_17(self):
+        with self.assertRaises(ValueError):
+            find_minimum([True, False, 1, 0])
 
 
 
