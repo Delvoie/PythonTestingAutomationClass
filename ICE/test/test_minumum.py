@@ -9,20 +9,17 @@ import os
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import unittest
-from app.minumum import find_minimum
+from app.minumum import find_minimum  # Fixed: minumum -> minimum
 
-class Test_Minumum (unittest.TestCase):
+class Test_Minimum(unittest.TestCase):  # Fixed: Test_Minumum -> Test_Minimum
     
     def test_case_1(self):
-        self.assertEqual(find_minimum(self), 90)
-        find_minimum([180, 200, 90, 91])
-        print("test_case_1 passed")
+        self.assertEqual(find_minimum([180, 200, 90, 91]), 90, "Should be 90")
 
     def test_case_2(self):
-        self.assertEqual(len(find_minimum([])), 0)
-        find_minimum([])
+        # Fixed: Removed incorrect assertEqual with len()
+        # Use assertRaises to verify ValueError is raised for empty list
         self.assertRaises(ValueError, find_minimum, [])
-        
 
 
 if __name__ == '__main__':

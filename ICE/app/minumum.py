@@ -10,7 +10,7 @@ def find_minimum(integer_list):
     # first Check if list is empty
     if len(integer_list) == 0:
         raise ValueError("List is empty")
-    
+
     # Check if all values are integers
     for integers in integer_list:
         if not isinstance(integers, int):

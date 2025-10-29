@@ -249,20 +249,16 @@ class TestRhombus(unittest.TestCase):
 def run_tests(shape):
     """Load and run test suite for selected shape."""
     loader = unittest.TestLoader()
-    runner = unittest.TextTestRunner(verbosity=2)
+    runner = unittest.TextTestRunner()
 
     if shape == 'c':
         suite = loader.loadTestsFromTestCase(TestCircle)
-        print("\n ⬤ Running Circle Tests...")
     elif shape == 't':
         suite = loader.loadTestsFromTestCase(TestTrapezium)
-        print("\n ⏢ Running Trapezium Tests...")
     elif shape == 'e':
         suite = loader.loadTestsFromTestCase(TestEllipse)
-        print("\n 💫 Running Ellipse Tests...")
     elif shape == 'r':
         suite = loader.loadTestsFromTestCase(TestRhombus)
-        print("\n 🕳️ Running Rhombus Tests...")
     else:
         return
 
